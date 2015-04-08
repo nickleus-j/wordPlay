@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaterialAnagram", "MaterialAnagram\MaterialAnagram.csproj", "{99D8D67C-5A73-4EDB-A3B6-5D9C31F4E28F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaterialAnagram.Tests", "MaterialAnagram.Tests\MaterialAnagram.Tests.csproj", "{2CF19BC5-13A2-4254-8D9A-B910600A5D4D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{99D8D67C-5A73-4EDB-A3B6-5D9C31F4E28F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99D8D67C-5A73-4EDB-A3B6-5D9C31F4E28F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99D8D67C-5A73-4EDB-A3B6-5D9C31F4E28F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99D8D67C-5A73-4EDB-A3B6-5D9C31F4E28F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CF19BC5-13A2-4254-8D9A-B910600A5D4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CF19BC5-13A2-4254-8D9A-B910600A5D4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CF19BC5-13A2-4254-8D9A-B910600A5D4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CF19BC5-13A2-4254-8D9A-B910600A5D4D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
