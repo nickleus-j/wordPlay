@@ -1,8 +1,8 @@
 ﻿function LoadAnagram(str, consoleElemId) {
     var dt1 = new Date();
     $(consoleElemId).text('');
-    WriteLine(sampleAnagram(), consoleElemId);
-    WriteLine(FindAllPermutations(str), consoleElemId);
+    findAnagrams(str, consoleElemId);
+    //WriteLine(FindAllPermutations(str), consoleElemId);
     var dt2 = new Date();
     WriteLine("Code took " + (dt2.getTime() - dt1.getTime()) + " milliseconds to execute", consoleElemId);
 }
@@ -11,7 +11,7 @@ function sampleAnagram() {
     var words = new Array("Dog", "dOg", "God", "doggy", "dogg", "Zebra", "Wood");
     var unique = {},result="";
 
-    // iterate over all the words
+    // iterate over all the words Shortcuts
     for (i = 0; i < words.length; i++) {
 
         // get the word, all lowercase
@@ -60,4 +60,16 @@ function ToggleLetters(str, index1, index2) {
 
 function WriteLine(msg, consoleElemId) {
     $(consoleElemId).append(msg + "<br />");
+}
+//$.post("/Qr/MakeQrCode", { "givenUrl": givenUrl }, function (data) {
+function findAnagrams(str, consoleElemId) {
+    var dt1 = new Date();
+    $.post("/Anagram/AnagramGen", { "givenText": str }, function (data) {
+        data=JSON.parse(data);
+        for (var ctr = 0; ctr < data.length;ctr++){
+            WriteLine(data[ctr], consoleElemId);
+        }
+        var dt2 = new Date();
+        WriteLine("Code took " + (dt2.getTime() - dt1.getTime()) + " milliseconds to execute", consoleElemId);
+    });
 }
