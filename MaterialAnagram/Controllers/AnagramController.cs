@@ -23,7 +23,7 @@ namespace MaterialAnagram.Controllers
         {
             AnagramService anagramService = new AnagramService();
             //return Content(JsonGenerator.ToJSON(anagramService.getResults(givenText).Trim('\"').Split(',')));
-            return Content(anagramService.getResults(givenText).Trim('\"').Split(',').ToJSON());
+            return Content(anagramService.getResults(givenText,Server).Trim('\"').Split(',').ToJSON());
         }
 
     }

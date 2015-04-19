@@ -9,6 +9,10 @@ namespace MaterialAnagram.Service
 {
     public class AnagramService
     {
+        private string homePath;
+        public AnagramService() { }
+
+
         public Dictionary<string, string> Read()
         {
             var d = new Dictionary<string, string>();
@@ -38,6 +42,35 @@ namespace MaterialAnagram.Service
             response.Close();
             
             return d;
+        }//Server
+
+        public Dictionary<string, string> Read(HttpServerUtilityBase Server)
+        {
+            var d = new Dictionary<string, string>();
+           
+            // Read each line
+            using (StreamReader r = File.OpenText(Server.MapPath("~") + @"\entries.txt"))
+            //using (StreamReader r = new StreamReader(response.GetResponseStream()))
+            {
+                string line;
+                while ((line = r.ReadLine()) != null)
+                {
+                    // Alphabetize the line for the key
+                    // Then add to the value string
+                    string a = Alphabetize(line);
+                    string v;
+                    if (d.TryGetValue(a, out v))
+                    {
+                        d[a] = v + "," + line;
+                    }
+                    else
+                    {
+                        d.Add(a, line);
+                    }
+                }
+            }
+
+            return d;
         }
 
         private string Alphabetize(string s)
@@ -64,5 +97,20 @@ namespace MaterialAnagram.Service
             return result;
         }
 
+        public String getResults(String given, HttpServerUtilityBase Server)
+        {
+            Dictionary<string, string> d = Read(Server);
+            String result = "", temp;
+
+            if (d.Count < 1)
+                return "Empty";
+
+            if (d.TryGetValue(Alphabetize(given), out temp))
+            {
+                result += temp;
+            }
+            else result += ("-");
+            return result;
+        }
     }
 }
