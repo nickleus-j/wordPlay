@@ -15,9 +15,13 @@ namespace CipherLibrary.Techniques
             string result = string. Empty;
             foreach (char c in textMessage)
             {
-                int charposition = indexOfChar(alphabet,c);
+                int charposition = indexOfChar(alphabet, c);
                 int res = charposition+3;
-                result += alphabet[res % alphabet.Length];
+
+                if (charposition < 0)
+                    result += c;
+                else result += alphabet[res % alphabet.Length];
+
             }
             return result;
         }
@@ -28,7 +32,10 @@ namespace CipherLibrary.Techniques
             {
                 int charposition = indexOfChar(alphabet, c);
                 int res = charposition - 3;
-                result += alphabet[res % alphabet.Length];
+
+                if (charposition < 0)
+                    result += c;
+                else result += alphabet[res % alphabet.Length];
             } return result;
         }
 
