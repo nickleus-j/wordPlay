@@ -1,4 +1,7 @@
-﻿
+﻿function writeSpan(msg, cssClass, consoleElemId) {
+    var elem = "<span class='" + cssClass + "'>" + msg + "</span>";
+    $(consoleElemId).append(elem + "<br />");
+}
 
 function WriteLine(msg, consoleElemId) {
     $(consoleElemId).append(msg + "<br />");
@@ -13,6 +16,6 @@ function findAnagrams(str, consoleElemId) {
             WriteLine(data[ctr], consoleElemId);
         }
         var dt2 = new Date();
-        WriteLine("Code took " + (dt2.getTime() - dt1.getTime()) + " milliseconds to execute", consoleElemId);
+        writeSpan("Code took " + (dt2.getTime() - dt1.getTime()) + " milliseconds to execute","smallLabel", consoleElemId);
     });
 }
