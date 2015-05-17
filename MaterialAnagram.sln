@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaterialAnagram", "Material
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaterialAnagram.Tests", "MaterialAnagram.Tests\MaterialAnagram.Tests.csproj", "{2CF19BC5-13A2-4254-8D9A-B910600A5D4D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CipherLibrary", "CipherLibrary\CipherLibrary.csproj", "{9062BBDB-78C2-4597-A208-0E169219DFDD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2CF19BC5-13A2-4254-8D9A-B910600A5D4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CF19BC5-13A2-4254-8D9A-B910600A5D4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CF19BC5-13A2-4254-8D9A-B910600A5D4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9062BBDB-78C2-4597-A208-0E169219DFDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9062BBDB-78C2-4597-A208-0E169219DFDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9062BBDB-78C2-4597-A208-0E169219DFDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9062BBDB-78C2-4597-A208-0E169219DFDD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
