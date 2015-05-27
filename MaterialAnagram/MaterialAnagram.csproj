@@ -195,6 +195,8 @@
     <Content Include="font\roboto\Roboto-Medium.ttf" />
     <Content Include="font\roboto\Roboto-Regular.ttf" />
     <Content Include="font\roboto\Roboto-Thin.ttf" />
+    <None Include="Properties\PublishProfiles\WordPlay - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\WordPlay - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\CambrigdeDoubleClick.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
