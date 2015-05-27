@@ -25,3 +25,8 @@ function CaeserEncryption(str, consoleElemId) {
         $(consoleElemId).text(data);
     });
 }
+function AesEncryption(str, consoleElemId) {
+    $.post("/Cipher/GetAESResult", { "givenText": str}, function (data) {
+        $(consoleElemId).text(data);
+    });
+}

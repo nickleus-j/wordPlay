@@ -19,5 +19,12 @@ namespace MaterialAnagram.Controllers
             Caeser encryptor=new Caeser();
             return new HtmlString(encryptor.Encrypt(givenText));
         }
+
+        public HtmlString GetAESResult(string givenText)
+        {
+            AES encryptor = new AES();
+            return new HtmlString(encryptor.EncryptText( givenText));
+        }
+
     }
 }

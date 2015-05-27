@@ -16,6 +16,7 @@
     </div>
 </div>
 
+</ul>
 <div class="container">
     <div class="section">
         <!--   Icon Section   -->
@@ -31,8 +32,10 @@
             <div class="col s12 m4">
                 <div class="icon-block">
                     <h2 class="center light-blue-text"><i class="mdi-social-group"></i></h2>
-                    <h5 class="center">Synonyms</h5>
+                    <h5 class="center">AES</h5>
                     <p class="light">We have synonyms also for alternatives of the word</p>
+                    <input type="text" class="col m12" placeholder="Enter Text Here" id="textToAes" />
+                    <button class="btn btn-large waves-effect waves-light teal" onclick="AesEncryption($('#textToAes').val(), '#console')">AES Cipher</button>
                 </div>
             </div>
             <div class="col s12 m4">
