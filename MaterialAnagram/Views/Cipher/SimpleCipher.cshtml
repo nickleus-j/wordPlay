@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Simple Cipher";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+        <br><br>
+        <h1 class="header center green-text">Enter a text to Encrypt</h1>
+        <div class="row center">
+            <input type="text" class="col m12" placeholder="Enter Text Here" id="givenText" />
+        </div>
+        <div class="row center">
+            <a href="#console" id="download-button" class="btn btn-large waves-effect waves-teal green" onclick="CaeserEncryption($('#givenText').val(), '#console')">Caeser Cipher</a>
+        </div>
+        <br><br>
+        <div class="row ">
+            <p id="console" class="bigLabel"></p>
+        </div>
+    </div>
+</div>
+

@@ -11,9 +11,9 @@
     <nav class=" light-green" role="navigation">
     <div class="container">
         <div class="nav-wrapper">
-            <a id="logo-container" href="#" class="brand-logo">Word Play</a>
+            @Html.ActionLink("Word Play", "Index","Home")
             <ul id="nav-mobile" class="right side-nav">
-                <li><a href="#">Cipher</a></li>
+                <li>@Html.ActionLink("Caesar Cipher","SimpleCipher","Cipher")</li>
                 <li><a href="javascript:void(0)">AES Encryption</a></li>
             </ul><a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
         </div>

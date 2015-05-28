@@ -25,6 +25,6 @@ namespace MaterialAnagram.Controllers
             AES encryptor = new AES();
             return new HtmlString(encryptor.EncryptText( givenText));
         }
-
+        public ActionResult SimpleCipher() { return View(); }
     }
 }
