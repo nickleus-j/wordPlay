@@ -9,14 +9,21 @@ function WriteLine(msg, consoleElemId) {
 
 function findAnagrams(str, consoleElemId) {
     $(consoleElemId).text('');
-    var dt1 = new Date();
+    str = str.split(" ");
+    for (var word in str) {
+        findAnagram(str[word], consoleElemId);
+    }
+   
+}
+
+function findAnagram(str, consoleElemId) {
     $.post("/Anagram/AnagramGen", { "givenText": str.toLowerCase() }, function (data) {
-        data=JSON.parse(data);
-        for (var ctr = 0; ctr < data.length;ctr++){
+        data = JSON.parse(data);
+        WriteLine(" | " + str + " | ", consoleElemId);
+        for (var ctr = 0; ctr < data.length; ctr++) {
             WriteLine(data[ctr], consoleElemId);
         }
-        var dt2 = new Date();
-        writeSpan("Code took " + (dt2.getTime() - dt1.getTime()) + " milliseconds to execute","smallLabel", consoleElemId);
+        
     });
 }
 

@@ -12,11 +12,16 @@ namespace CipherLibrary.Techniques
         public readonly static char[] alphabet = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'I', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
         public  string Encrypt(string textMessage)
         {
-            string result = string. Empty;
+            return Encrypt(textMessage,3);
+        }
+
+        public string Encrypt(string textMessage,int addend)
+        {
+            string result = string.Empty;
             foreach (char c in textMessage)
             {
                 int charposition = indexOfChar(alphabet, c);
-                int res = charposition+3;
+                int res = charposition + addend;
 
                 if (charposition < 0)
                     result += c;
@@ -25,6 +30,7 @@ namespace CipherLibrary.Techniques
             }
             return result;
         }
+
         public  string Decrypt(string textMessage)
         {
             string result = string.Empty;
