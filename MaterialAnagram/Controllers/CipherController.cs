@@ -16,15 +16,21 @@ namespace MaterialAnagram.Controllers
         }
         public HtmlString CaeserEncryption(string givenText)
         {
-            Caeser encryptor=new Caeser();
+            Caeser encryptor = new Caeser();
             return new HtmlString(encryptor.Encrypt(givenText));
         }
 
         public HtmlString GetAESResult(string givenText)
         {
             AES encryptor = new AES();
-            return new HtmlString(encryptor.EncryptText( givenText));
+            return new HtmlString(encryptor.EncryptText(givenText));
         }
         public ActionResult SimpleCipher() { return View(); }
+        public ActionResult Monoalphabetic() { return View(); }
+        public HtmlString MonoalphabeticEncryption(string givenText)
+        {
+            Monoalphabetic encryptor = new Monoalphabetic();
+            return new HtmlString(encryptor.Encrypt(givenText.ToLower()));
+        }
     }
 }

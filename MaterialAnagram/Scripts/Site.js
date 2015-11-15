@@ -37,3 +37,9 @@ function AesEncryption(str, consoleElemId) {
         $(consoleElemId).text(data);
     });
 }
+
+function MonoalphabeticEncryption(str, consoleElemId) {
+    $.post("/Cipher/MonoalphabeticEncryption", { "givenText": str.toLowerCase() }, function (data) {
+        $(consoleElemId).text(data);
+    });
+}

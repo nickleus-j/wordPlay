@@ -14,6 +14,7 @@
             @Html.ActionLink("Word Play", "Index","Home")
             <ul id="nav-mobile" class="right side-nav">
                 <li>@Html.ActionLink("Caesar Cipher","SimpleCipher","Cipher")</li>
+                <li>@Html.ActionLink("Monoalphabetic Cipher", "Monoalphabetic", "Cipher")</li>
                 <li><a href="javascript:void(0)">AES Encryption</a></li>
             </ul><a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
         </div>
@@ -30,7 +31,7 @@
                     <p class="grey-text text-lighten-4">Word Play is where make fun out of words and phrases</p>
 
                 </div>
-                <div class="col l3 s12">
+                @*<div class="col l3 s12">
                     <h5 class="white-text">Settings</h5>
                     <ul>
                         <li><a class="white-text" href="#!">Scabble</a></li>
@@ -38,14 +39,14 @@
                         <li><a class="white-text" href="#!">Fill in the blanks</a></li>
                         <li><a class="white-text" href="#!">Word Search</a></li>
                     </ul>
-                </div>
+                </div>*@
                 <div class="col l3 s12">
                     <h5 class="white-text">Classical Encryption</h5>
                     <ul>
-                        <li><a class="white-text" href="#!">Ceasar Cipher</a></li>
-                        <li><a class="white-text" href="#!">Auto Key</a></li>
-                        <li><a class="white-text" href="#!">Hill Cipher</a></li>
-                        <li><a class="white-text" href="#!">Mono Alphabetic</a></li>
+                        <li>@Html.ActionLink("Caesar Cipher", "SimpleCipher", "Cipher",new {@class= "blue-grey-text lighten-5" })</li>
+                        @*<li><a class="white-text" href="#!">Auto Key</a></li>
+                        <li><a class="white-text" href="#!">Hill Cipher</a></li>*@
+                        <li>@Html.ActionLink("Monoalphabetic Cipher", "Monoalphabetic", "Cipher", new { @class = "blue-grey-text lighten-5" })</li>
                     </ul>
                 </div>
             </div>
